@@ -11,9 +11,9 @@ An Arduino-based sailboat racing horn that plays the ISAF/US Sailing standard co
 | 1 | Arduino Nano clone | |
 | 2 | 400W 5V–36V Dual MOSFET High-Power Motor Driver Module | Used to switch the 12V horn from a 5V Arduino signal |
 | 3 | 12V car horn | Mounted into ammo can with JB Weld |
-| 4 | HARDROCK AMMO Waterproof Ammo Can | Hole cut and horn glued in for weatherproofing |
-| 5 | LiFePO4 12V 15Ah lithium battery | Similar: Ampere Time / LiTime 12V 12Ah or 20Ah LiFePO4 |
-| 6 | EBOOT MP1584EN DC-DC Buck Converter (6-pack) | Steps 12V battery down to 5V for Arduino |
+| 4 | AMMO Waterproof Ammo Can | Hole cut and horn glued in for weatherproofing. Can be found at most army-navy stores.|
+| 5 | LiFePO4 12V 15Ah lithium battery | Any small 12V battery which you have a way to recharge will probably do |
+| 6 | DC-DC Buck Converter (6-pack) | Steps 12V battery down to 5V for Arduino |
 | 7 | Protoboard | For connecting components |
 | 8 | Hookup wire | 22–24 AWG for signal lines; heavier gauge for horn power |
 | 9 | Momentary push buttons (×2) | Start and Reset/Cancel |
@@ -139,4 +139,4 @@ Hold the **Start button** while powering on. The device enters test mode:
 
 ## Enclosure
 
-The horn is mounted through a hole cut in a **HARDROCK AMMO waterproof ammo can** and sealed with **JB Weld** epoxy.  All electronics and the battery are housed inside the can. Step drill bits are helpful for drilling holes for the enclosure.
+The horn is mounted through a hole cut in a **AMMO waterproof ammo can** and sealed with **JB Weld** epoxy.  All electronics and the battery are housed inside the can. Step drill bits are helpful for drilling holes for the enclosure.

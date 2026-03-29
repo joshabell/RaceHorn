@@ -30,30 +30,30 @@
 //   5 short bursts @ 500 ms gap      <- start signal
 //   3 second burst                   <- end signal
 const char RACE_SEQUENCE[] =
-  "+_+_+_+_+"                      // 5 short bursts, 500 ms gaps (4.5 s)
-  "__________"                     // 5 s silence               (5 s)
-  "++__++__++"                     // 3 long bursts, 1 s gaps   (5 s)
-  "____________________________________________________________"  // \
-  "____________________________________________________________"  //  > 1 min silence (120 chars)
-  "++__++"                         // 2 long bursts, 1 s gap    (3 s)
-  "____________________________________________________________"  // \
-  "____________________________________________________________"  //  > 1 min silence
-  "++"                             // 1 long burst              (1 s)
-  "____________________________________________________________"  // 30 s silence (60 chars)
-  "+_+_+"                          // 3 short bursts, 500 ms gaps (2.5 s)
-  "____________________"           // 10 s silence              (20 chars)
-  "+_+"                            // 2 short bursts, 500 ms gap (1.5 s)
-  "____________________"           // 10 s silence
-  "+"                              // 1 short burst             (0.5 s)
-  "__________"                     // 5 s silence
-  "+_+_+_+_+"                      // 5 short bursts, 500 ms gaps (4.5 s)
-  "++++++_";                        // 3 second burst               (3 s)
+  "+_+_+_+_+"                                                          // 5 short bursts, 500 ms gaps (4.5 s)
+  "__________"                                                         // 5 s silence               (5 s)
+  "++_++_++"                                                           // 3 long bursts, 500ms gaps   (4 s)
+  "____________________________________________________________"       //
+  "____________________________________________________"               //  > 1 min silence (120-8 chars) (-4 seconds to account for 3 minute horn)
+  "++_++"                                                              // 2 long bursts, 500ms gap    (2.5 s)
+  "____________________________________________________________"       //
+  "_______________________________________________________"            //  > 1 min silence (-2.5 seconds to account for 2 minut horn)
+  "++"                                                                 // 1 long burst              (1 s)
+  "__________________________________________________________"         // 30 s silence (60-2 chars) (-1 second to account for 1 minute)
+  "+_+_+"                                                              // 3 short bursts, 500 ms gaps (2.5 s)
+  "_______________"                                                    // 10 s silence              (20-5 chars)
+  "+_+"                                                                // 2 short bursts, 500 ms gap (1.5 s)
+  "_________________"                                                  // 10 s silence
+  "+"                                                                  // 1 short burst             (0.5 s)
+  "_________"                                                          // 5 s silence
+  "+_+_+_+_+"                                                          // 5 short bursts, 500 ms gaps (4.5 s)
+  "++++++_";                                                           // 3 second burst               (3 s)
 
 // Cancel-race sequence: 5 long bursts each separated by 1 second
 const char CANCEL_SEQUENCE[] = "++__++__++__++__++";
 
 // Finish sequence: single 2-second burst (cancel pressed outside a race)
-const char FINISH_SEQUENCE[] = "++++";
+const char FINISH_SEQUENCE[] = "++";
 
 bool testMode = false;
 bool sequenceRunning = false;

@@ -301,6 +301,70 @@ body {
 .specs__k { font-weight: 800; color: var(--amber); }
 .specs__v { text-align: right; }
 
+/* ---- Gallery ---- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.4rem;
+}
+.product {
+  background: var(--paper);
+  border: 2px solid var(--crude);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 0 var(--crude);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 0 var(--crude);
+}
+.product--limited { border-color: var(--red); box-shadow: 0 6px 0 var(--red); }
+.product--limited:hover { box-shadow: 0 10px 0 var(--red); }
+
+.product__art {
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--crude);
+}
+.product__art--barrel  { background: radial-gradient(circle at 50% 120%, var(--amber), var(--amber-deep)); }
+.product__art--dozen   { background: radial-gradient(circle at 50% 120%, var(--pb-light), var(--pb)); }
+.product__art--crate   { background: repeating-linear-gradient(45deg, var(--crude-2) 0 16px, var(--crude) 16px 32px); }
+.product__art--pocket  { background: radial-gradient(circle at 50% 120%, #f7d79b, var(--amber-deep)); }
+.product__art--offshore{ background: linear-gradient(160deg, var(--blue), var(--crude)); }
+.product__art--reserve { background: linear-gradient(160deg, #5a4a2f, var(--crude)); }
+
+.product__cookie {
+  font-size: 3.4rem;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+.product__badge {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: var(--crude);
+  color: var(--amber);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+.product__badge--hot { background: var(--red); color: #fff; }
+
+.product h3 { font-family: var(--slab); margin: 0.9rem 1rem 0.3rem; font-size: 1.15rem; }
+.product__desc { margin: 0 1rem; font-size: 0.9rem; }
+.product__price {
+  margin: 0.7rem 1rem 1.1rem;
+  font-family: var(--slab);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--amber-deep);
+}
+.product__price span { font-size: 0.75rem; font-weight: 600; color: var(--ink); opacity: 0.6; }
+
 /* ---- VS ---- */
 .vs {
   display: grid;
